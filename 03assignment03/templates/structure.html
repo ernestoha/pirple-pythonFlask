@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang ='en'>
+
+  <head>
+    <meta charset = "utf-8">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>ToDo List.</title> <!-- Setting Page title -->
+  </head>
+
+  <body>
+
+    <div id="header-content" class="flex-center"><!-- Page Header -->
+      <header>
+          <div id="header-left-side">
+              <div class="v-center">
+                  <div id="logo">
+                      <a name="route-to-home" href="/">ToDo List</a>
+                  </div>
+                  <div><a href="dashboard">Dashboard</a></div>
+                  <div><a href="terms-of-use">Terms Of use</a></div>
+                  <div><a href="privacy">Privacy</a></div>
+                  <div><a href="about">About</a></div>
+                  
+              </div>
+          </div>
+          <div id="header-right-side">
+              <div class="v-center">
+                  <a href="sign-up" id="sign-up" class="button btn-add">Sign Up</a>
+              </div>
+              <div class="v-center">
+                  <a href="log-in" id="log-in" class="button btn-log">Log In</a>
+              </div>
+              <div class="v-center"> <!-- display-none -->
+                  <a href="user-edit" id="edit-user" class="button btn-edit">Account Settings</a>
+              </div>
+              <div class="v-center"> <!-- display-none -->
+                  <a href="#" id="log-out" class="button btn-log">Log Out</a>
+              </div>
+          </div>
+      </header>
+    </div>
+
+    <div id="content">
+      {% block main %}
+
+      {% endblock main %}
+    </div>
+
+    <footer>
+      <div id="page-footer" class="v-center">
+          ToDo 2020
+      </div>
+    </footer>  
+  </body>
+</html>

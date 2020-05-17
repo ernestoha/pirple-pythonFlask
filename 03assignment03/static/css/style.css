@@ -1,0 +1,258 @@
+/* ToDo List Style */
+
+h1 {
+  color: blueviolet;
+}
+
+div.home-content p{
+  font-style: italic;
+  font-weight: bold;
+}
+
+div.about-content{
+  display: flex;
+}
+
+div.about-content img#avatar{
+  display: block;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lion_waiting_in_Namibia.jpg/220px-Lion_waiting_in_Namibia.jpg) no-repeat;
+  width: 220px;
+  height: 165px;
+}
+
+div.about-content p{
+  display: block;
+  padding-left: 10px; 
+  margin-top: -2px;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: inherit;
+  margin: 0px;
+  padding: 0px;
+  background-color: #fff;
+  font-size: 16px;
+  font-family: Arial;
+  line-height: 1.5;
+}
+
+/* Header-Begin */
+#header-content {
+  /* width: 100%; */
+  height: auto;
+  /* background-color: #24292e; */
+  background-color: darkgray;
+}
+
+header {
+  /* width: 100%; */
+  height: 60px;
+  display: flex;
+  justify-content: space-between; /* To align div left and righ with a space between */
+}
+
+header div#header-left-side {
+  margin-left: 15px;
+  display: flex;
+}
+
+header div#header-left-side div{
+  display: flex;
+}
+
+header div#header-left-side div div{
+  margin-left: 10px;
+}
+
+header div#header-left-side div div:first-child{
+  margin-left: 0px;
+}
+
+header div#header-right-side {
+  margin-right: 15px;
+  display: flex;
+}
+
+header div#header-right-side div {
+  margin-left: 25px;
+}
+
+div#logo {
+  /* height: 72px; */
+  width: 72px;
+}
+/* Header-End */
+
+#content {
+  width: 1200px;
+  margin: auto;
+}
+
+#home {
+  margin-bottom: 20px;
+}
+.display-none {
+  /*}, #sign-up-form, #log-in-form {*/
+  display: none;
+}
+
+div.page-route {
+  width: 620px;
+  background: #ccc;
+  padding: 10px;
+}
+
+#dash-msg {
+    display: block;
+    text-align: center;
+}
+
+.col-center {
+    float: none;
+    margin: 0 auto;
+}
+
+.v-center {
+    margin: auto;
+}
+
+.fill-eha-data {
+  background-color: indigo;
+  color: white;
+  font-weight: bold;
+  width: 100px;
+  height: 20px;
+}
+
+#todo-create-form label{
+  width: 60px;
+}
+
+div.form-row-group {
+  margin-top: 10px;
+  display: flex;
+}
+
+div.form-row-group label {
+  display: block;
+  width: 100px;
+  margin-left: 15px;
+}
+
+div.form-row-group input {
+  width: 250px;
+}
+
+.edit-todo-form {
+  display: flex;
+}
+
+#dashboard-form input[type="submit"] {
+  width: 50px;
+  margin: 0px;
+}
+
+#dashboard-form div.form-row-group input, span {
+  margin-right: 5px;
+}
+
+div.form-row-group input[type="submit"] {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+div.form-row-group input[type="checkbox"] {
+  width: auto;
+}
+
+div.form-row-group input,
+span {
+  margin-right: 20px;
+}
+
+div.error {
+  color: red;
+  font-weight: bold;
+}
+
+div.success {
+  color: green;
+  font-weight: bold;
+}
+
+.button {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #eeeeee;
+  color: #3f3f3f;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 1px 7px 2px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #959595;
+}
+
+.todo-title {
+  color: blue;
+}
+
+.col-center {
+    float: none;
+    margin: 0 auto;
+}
+
+ul.list {
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.list li {
+  margin-top: 5px;
+}
+
+.todo-list { /*button div*/
+  font-weight: bold;
+  margin-left: 2px;
+  display: inline-block;
+}
+
+.btn-log{
+  background-color: chocolate;
+  color: white;
+}
+
+.btn-add{ /*a button*/
+  background-color: green;
+  color: white;
+}
+
+.btn-edit{ /*a button*/
+  background-color: cornflowerblue;
+  color: white;
+}
+
+.btn-delete{ /*a button*/
+  background-color: red;
+  color: white;
+}
+
+/* Footer-Begin */
+footer {
+    width:100%;
+    margin-top:30px;
+    background-color: darkgray;
+}
+
+#page-footer{
+    text-align: center;
+    color: white;
+}
+/* Footer-End */
+

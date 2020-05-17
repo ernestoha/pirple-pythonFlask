@@ -1,0 +1,31 @@
+{% extends "structure.html" %}
+
+{% block main %}
+  <h1>Account Settings:</h1>
+  <div id="edit-user-form" class="page-route v-center">
+    <div class="form-row-group">
+        <a name="route-to-dashboard" class="button" href="dashboard" title="Back"><-</a>
+    </div>
+    <form name="edit-user-form" action="#">
+        <div class="form-row-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" autocomplete="off" disabled />
+        </div>
+        <div class="form-row-group">
+            <label for="fname">First Name</label>
+            <input type="text" name="fname" autocomplete="off" />
+        </div>
+        <div class="form-row-group">
+            <label for="lname">Last Name</label>
+            <input type="text" name="lname" autocomplete="off" />
+        </div>
+        <div class="form-row-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" autocomplete="off" />
+        </div>
+        <div class="form-row-group">
+            <input id="edit-user-submit" type="submit" value="Save" />
+        </div>
+    </form> 
+  </div>
+{% endblock main %}
