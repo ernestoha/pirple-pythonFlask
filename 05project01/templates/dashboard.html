@@ -1,0 +1,27 @@
+{% extends "structure.html" %}
+
+{% block main %}
+  <div id="dashboard-form" class="page-route v-center">
+    <div class="form-row-group">
+        <a name="create-new-todo" class="button btn-add" href="todo-new" title="Create New">Create New</a>
+    </div>
+    <div class="form-row-group" id="todo-titles">
+        {% if task %}
+         <ul class="list">
+          {% for item in task -%}
+          <li>
+            <form class="edit-todo-form" method="POST">
+              <input name="save-todo-list" type="submit" value="save" class="todo-list btn-add" />
+              <input type="checkbox" name="done"{% if item[3] %} checked {% endif %} />
+              <input name="title" type="text" value={{ item[2] }} />
+              <input name="id" type="hidden" value="{{ item[0] }}" />
+            </form>
+          </li>
+          {%- endfor %}
+         </ul>
+        {% endif %}
+      {# task #}
+    </div>
+  </div>
+{% endblock main %}
+

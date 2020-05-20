@@ -1,0 +1,43 @@
+{% extends "structure.html" %}
+
+{% block main %}
+  <div class="about-content">
+    <div id="sign-up-form" class="page-route v-center">
+      <!--div class="form-row-group">
+          <a name="route-to-home" class="button" href="#" title="Back"><-</a>
+      </div-->
+      <form name="sign-up-form" method="POST">
+          <div class="form-row-group">
+              <label for="fname">First Name</label>
+              <input type="text" name="fname" value="{{ user.fname }}" autocomplete="off" />
+          </div>
+          <div class="form-row-group">
+              <label for="lname">Last Name</label>
+              <input type="text" name="lname" value="{{ user.lname }}" autocomplete="off" />
+          </div>
+          <!--div class="form-row-group">
+              <label for="login">Username</label>
+              <input type="text" name="login" id="login" autocomplete="off" />
+          </div-->
+          <div class="form-row-group">
+              <label for="email">Email</label>
+              <input type="email" name="email" value="{{ user.email }}" autocomplete="off" />
+          </div>
+          <div class="form-row-group">
+              <label for="password">Password</label>
+              <input type="password" name="password" autocomplete="off" />
+          </div>
+          <div class="form-row-group">
+              <input type="checkbox" name="terms" {% if user.terms %} checked {% endif %}/>
+              <span class="text-small">
+                  I agree to the <a href="terms-of-use" >Terms Use</a>.
+              </span>
+          </div>
+          <div class="form-row-group">
+              <input id="sign-up-submit" type="submit" value="Submit" />
+              <!--button id="fill-eha-data1" class="fill-eha-data">EHA DATA</button-->
+          </div>
+      </form> 
+    </div>
+  </div>
+{% endblock main %}

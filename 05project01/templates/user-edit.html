@@ -1,0 +1,30 @@
+{% extends "structure.html" %}
+
+{% block main %}
+  <div id="edit-user-form" class="page-route v-center">
+    <div class="form-row-group">
+        <a name="route-to-dashboard" class="button" href="dashboard" title="Back"><-</a>
+    </div>
+    <form name="edit-user-form" method="POST">
+        <div class="form-row-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" value="{{ user.email }}" autocomplete="off" disabled />
+        </div>
+        <div class="form-row-group">
+            <label for="fname">First Name</label>
+            <input type="text" name="fname" value="{{ user.fname }}" autocomplete="off" />
+        </div>
+        <div class="form-row-group">
+            <label for="lname">Last Name</label>
+            <input type="text" name="lname" value="{{ user.lname }}" autocomplete="off" />
+        </div>
+        <div class="form-row-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" value="{{ user.password }}" autocomplete="off" />
+        </div>
+        <div class="form-row-group">
+            <input id="edit-user-submit" type="submit" value="Save" />
+        </div>
+    </form> 
+  </div>
+{% endblock main %}

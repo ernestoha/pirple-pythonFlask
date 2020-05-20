@@ -1,0 +1,22 @@
+{% extends "structure.html" %}
+
+{% block main %}
+  <div id="todo-create-form" class="page-route v-center">
+    <div class="form-row-group">
+        <a name="route-to-dashboard" class="button" href="dashboard" title="Back"><-</a>
+    </div>
+    <form name="todo-create-form" method="POST">
+        <div class="form-row-group">
+            <label for="title">Title</label>
+            <input type="text" name="title" autocomplete="off" value="{{ task.title }}"/>
+        </div>
+        <div class="form-row-group">
+            <label for="title">Done</label>
+            <input type="checkbox" name="done" {% if task.done %} checked {% endif %} />
+        </div>
+        <div class="form-row-group">
+            <input id="todo-create-submit" type="submit" value="Submit" />
+        </div>
+    </form>
+  </div>
+{% endblock main %}

@@ -1,0 +1,23 @@
+{% extends "structure.html" %}
+
+{% block main %}
+  <div id="log-in-form" class="page-route v-center">
+    <!--div class="form-row-group">
+        <a name="route-to-home" class="button" href="#" title="Back"><-</a>
+    </div-->
+    <form name="log-in-form" method="POST">
+        <div class="form-row-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" autocomplete="off" value="{{ ehaData.email }}" />
+        </div>
+        <div class="form-row-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" autocomplete="off" value="{{ ehaData.password }}" />
+        </div>
+        <div class="form-row-group">
+            <input id="log-in-submit" type="submit" value="Submit" />
+            <button id="fill-eha-data2" class="fill-eha-data">EHA DATA</button>
+        </div>
+    </form> 
+  </div>
+{% endblock main %}
