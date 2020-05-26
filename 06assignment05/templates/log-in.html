@@ -1,0 +1,22 @@
+{% extends "structure.html" %}
+
+{% block style %}
+    <link rel="stylesheet" href="static/css/singin.css">
+{% endblock style %}
+
+{% block main %}
+<form class="form-signin" method="POST">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" autocomplete="off" value="{{ ehaData.email }}" required autofocus >
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" autocomplete="off" value="{{ ehaData.password }}" required>
+    <!--div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div-->
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <!--button id="fill-eha-data2" class="fill-eha-data">EHA DATA</button-->
+</form>
+{% endblock main %}

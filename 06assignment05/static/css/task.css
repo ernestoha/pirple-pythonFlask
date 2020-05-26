@@ -1,0 +1,31 @@
+.form-task-dashboard {
+  width: 100%;
+  padding: 10px;
+  margin: auto;
+}
+
+.form-task {
+  width: 100%;
+  max-width: 440px;
+  padding: 15px;
+  margin: auto;
+}
+.form-task .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-task .form-control:focus {
+  z-index: 2;
+}
+
+/*.form-task*/ input[type="text"] {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/*.form-task*/ label span {
+  margin-left: 10px;
+}
