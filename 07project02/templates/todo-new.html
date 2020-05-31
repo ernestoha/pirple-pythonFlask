@@ -1,0 +1,38 @@
+{% extends "structure.html" %}
+
+{% block style %}
+    <link rel="stylesheet" href="static/css/task.css">
+{% endblock style %}
+
+{% block main %}
+<form class="form-task" method="POST" style="display: none;">
+    <!-- Bootstrap Style-->
+    <h1 class="h3 mb-3 font-weight-normal">New Task</h1>
+    <label for="inputTitle" class="sr-only">Title</label>
+    <input type="text" name="title" id="inputTitle" class="form-control" placeholder="Title" autocomplete="off" value="{{ task.title }}" required autofocus >
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" name="done" value="on" {% if task.done %} checked {% endif %} > <span>Done</span>
+        </label>
+      </div>
+    <button class="btn btn-lg btn-success btn-block" type="submit">Save</button>
+</form>
+
+<form class="form-task grid-x grid-padding-x" method="POST">
+    <!-- Foundation Style -->
+    <div class="medium-3 cell">
+        <label for="inputTitle" class="text-right middle">Title</label>
+    </div>
+    <div class="medium-9 cell">
+        <input type="text" name="title" id="inputEmail" placeholder="Title" autocomplete="off" value="{{ task.title }}" required autofocus >
+    </div>
+    <div class="checkbox medium-7 cell">
+        <label>
+            <input type="checkbox" name="done" value="on" {% if task.done %} checked {% endif %} > <span>Done</span>
+        </label>
+      </div>
+    <div class="medium-12 float-center">
+        <button class="button success" type="submit">Save</button>
+    </div>
+</form>
+{% endblock main %}

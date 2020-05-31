@@ -1,0 +1,42 @@
+{% extends "structure.html" %}
+
+{% block style %}
+    <link rel="stylesheet" href="static/css/task.css">
+{% endblock style %}
+
+{% block main %}
+
+  <div id="dashboard-form" class="container">
+    <div class="row">
+      <div class="medium-5">
+        <a name="create-new-todo" class="button success" href="todo-new" title="Create New">Create New</a>
+      </div>
+    </div>
+    <!--div class="row" id="todo-titles">
+      <div class="cols-12"-->
+        {% for item in task -%}
+        <form class="form-task-dashboard grid-x grid-padding-x align-middle" method="POST">
+          <!--div class="row"-->
+            <div class="medium-3 text-right cell">
+              <input name="save-todo-list" type="submit" value="save" class="button success" />
+            </div>
+            <div class="medium-6 text-center cell">
+              <input type="text" name="title" placeholder="Title" autocomplete="off" value="{{ item[2] }}" required >
+            </div>
+            <div class="medium-3 text-left cell ">
+              <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="done" value="on" {% if item[3] %} checked {% endif %} > <span>Done</span>
+                </label>
+              </div>
+              <input name="id" type="hidden" value="{{ item[0] }}" />
+            </div>
+          <!--/div-->
+        </form>
+        {%- endfor %}
+      {# task #}
+      <!--/div>
+    </div-->
+  </div>
+{% endblock main %}
+

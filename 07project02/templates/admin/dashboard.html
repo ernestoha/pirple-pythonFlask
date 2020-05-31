@@ -1,0 +1,57 @@
+{% extends "structure.html" %}
+
+{% block style %}
+    <link rel="stylesheet" href="/static/css/admin.css">
+{% endblock style %}
+
+{% block main %}
+
+  <div id="dashboard-form" class="container" style="display: none;">
+    <!-- Bootstrap Style-->
+    <div class="row">
+      <div class="col-3">Total user signups:</div>
+      <div class="col-3">Total signups in the last 24 hours:</div>
+      <div class="col-3">Total lists created:</div>
+      <div class="col-3">Lists created in the last 24 hours:</div>
+    </div>
+    <div class="row">
+      <div class="col-3"><a href="/admin/users">{{ data.totalUsers }}</a></div>
+      <div class="col-3"><a href="/admin/users">{{ data.totalUsers24H }}</a></div>
+      <div class="col-3"><a href="/admin/tasks">{{ data.totalTasks }}</a></div>
+      <div class="col-3"><a href="/admin/tasks">{{ data.totalTasks24H }}</a></div>
+    </div>
+  </div>
+
+  <div id="dashboard-form">
+    <!-- Foundation Style -->
+    <div class="grid-x grid-padding-x">
+      <div class="medium-3 text-left cell">
+        <p>Total user signups:</p>
+      </div>
+      <div class="medium-3 text-left cell">
+        <p>Total signups in the last 24 hours:</p>
+      </div>
+      <div class="medium-3 text-left cell">
+        <p>Total lists created:</p>
+      </div>
+      <div class="medium-3 text-left cell">
+        <p>Lists created in the last 24 hours:</p>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x">
+      <div class="medium-3 text-left cell">
+        <div class="stat"><a href="/admin/users">{{ data.totalUsers }}</a></div>
+      </div>
+      <div class="medium-3 text-left cell">
+        <div class="stat"><a href="/admin/users">{{ data.totalUsers24H }}</a></div>
+      </div>
+      <div class="medium-3 text-left cell">
+        <div class="stat"><a href="/admin/tasks">{{ data.totalTasks }}</a></div>
+      </div>
+      <div class="medium-3 text-left cell">
+        <div class="stat"><a href="/admin/tasks">{{ data.totalTasks24H }}</a></div>
+      </div>
+    </div>
+  </div>
+{% endblock main %}
+

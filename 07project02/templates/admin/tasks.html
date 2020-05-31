@@ -1,0 +1,85 @@
+{% extends "structure.html" %}
+
+{% block style %}
+    <link rel="stylesheet" href="/static/css/admin.css">
+{% endblock style %}
+
+{% block main %}
+
+  <div id="dashboard-form" class="container" style="display: none;">
+    <!-- Bootstrap Style-->
+    
+    <form class="row" method="GET">
+      <input type="hidden" name="page" value="{{ data.page }}">
+      <div class="col-12 text-right">
+          <span>Page: {{ data.page -1 }} of {{ data.totalPages }}. Rows Per Page: {{ data.paginatePerPage }} Total Rows: {{ data.totalData }}.</span>
+          {% if data.moreButon %}<input type="submit" name="more" class="btn btn-info" value="More">{% endif %}
+      </div>
+    </form>
+    
+    <div class="row">
+      <div class="col-2">Id</div>
+      <div class="col-3">User</div>
+      <div class="col-3">List</div>
+      <div class="col-1">Done</div>
+      <div class="col-3">Created</div>
+    </div>
+    {% for item in data.detail -%}
+      <div class="row">
+        <div class="col-2">{{ item[0] }}</div>
+        <div class="col-3">{{ item[1] }}</div>
+        <div class="col-3">{{ item[2] }}</div>
+        <div class="col-1">{{ item[3] }}</div>
+        <div class="col-3">{{ item[4]|format_datetime }}</div>
+        <!--
+        {# for item in items #}
+          <div class="col-2">{# item #}</div>
+        {# endfor #}
+        -->
+      </div>
+      {% else %}
+      <div class="row">
+        <div class="col-12 text-danger">No Data</div>
+      </div>
+    {%- endfor %}
+  </div>
+
+  <div id="dashboard-form" class="container">
+    <!-- Foundation Style-->
+  <table>
+      <thead>
+        <tr>
+          <th class="text-center">Id</th>
+          <th class="text-center">User</th>
+          <th class="text-center">List</th>
+          <th class="text-center">Done</th>
+          <th class="text-center">Created</th>
+        </tr>
+      </thead>
+      <tbody>
+    {% for item in data.detail -%}
+      <tr>
+        <td class="text-center">{{ item[0] }}</td>
+        <td class="text-center">{{ item[1] }}</td>
+        <td class="text-center">{{ item[2] }}</td>
+        <td class="text-center">{{ item[3] }}</td>
+        <td class="text-center">{{ item[4]|format_datetime }}</td>
+      </tr>
+      {% else %}
+      <tr>
+        <td colspan="5" class="callout alert">No Data</td>
+      </tr>
+    {%- endfor %}
+      </tbody>
+    </table>
+
+    <form class="grid-x grid-padding-x" method="GET">
+      <input type="hidden" name="page" value="{{ data.page }}">
+      <div class="medium-12 text-right cell">
+          <span>Page: {{ data.page -1 }} of {{ data.totalPages }}. Rows Per Page: {{ data.paginatePerPage }} Total Rows: {{ data.totalData }}.</span>
+          {% if data.moreButon %}<input type="submit" name="more" class="button" value="More">{% endif %}
+      </div>
+    </form>
+  </div>
+{% endblock main %}
+

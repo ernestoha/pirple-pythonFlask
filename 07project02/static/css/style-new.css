@@ -1,0 +1,25 @@
+body {
+    background-color: #f5f5f5;
+}
+
+div.about-content{
+  display: flex;
+}
+
+div.about-content img#avatar{
+  display: block;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lion_waiting_in_Namibia.jpg/220px-Lion_waiting_in_Namibia.jpg) no-repeat;
+  width: 220px;
+  height: 165px;
+  margin-bottom: 15px;
+}
+
+div.about-content p{
+  display: block;
+  padding-left: 10px; 
+  margin-top: -2px;
+}
+
+footer {
+  background: lightgray;
+}

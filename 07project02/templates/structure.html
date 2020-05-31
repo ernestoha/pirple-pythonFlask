@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang ='en'>
+
+  <head>
+    <meta charset = "utf-8">
+    <link rel="stylesheet" href="/static/css/foundation.css" />
+    {% block style %}
+
+    {% endblock style %}
+    <link rel="stylesheet" href="/static/css/style-new.css" />
+    <title>ToDo List.</title> <!-- Setting Page title -->
+  </head>
+
+  <body>
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li class="menu-text">ToDoList</li>
+          {% for item in nav %}
+            <li class="{% if item.href==url_for(request.endpoint)%}active{% endif %}">
+              <a href="{{item.href}}">{{item.title}}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><input type="search" placeholder="Search"></li>
+          <li><button type="button" class="button">Search</button></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid-container">
+      <div class="text-center">
+      {% if(title!=None) %}
+        <h1>{{ title }}</h1>
+      {% endif %}
+      
+      {% if(msg!=None) %}
+        <div class="row">
+          <div class="callout {{ msg.class }}" id="dash-msg">{{ msg.text }}</div>
+        </div>
+      {% endif %}
+
+      {% block main %}
+
+      {% endblock main %}
+      </div>
+    </div>
+
+    <footer class="wrap row small-up-1 medium-up-3">
+      <div class="grid-x grid-padding-x row align-middle">
+        <div class="medium-6 text-left cell">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lion_waiting_in_Namibia.jpg/220px-Lion_waiting_in_Namibia.jpg" alt="" width="24" height="24">`
+          <small>&copy; ToDo 2020</small>
+        </div>
+        <div class="medium-6 text-right cell">
+          <h5>About</h5>
+          <ul class="no-bullet">
+            <li><a href="/about">Us</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms-of-use">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
