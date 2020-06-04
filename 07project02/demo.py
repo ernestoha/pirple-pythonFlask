@@ -344,4 +344,5 @@ def getNav():
 #     return redirect(url_for('logIn'))
 
 if __name__ == '__main__':
-        app.run(host = "0.0.0.0", port = 7000, debug = True)
+        app.run()
+        #app.run(host = "0.0.0.0", port = 7000, debug = True)
