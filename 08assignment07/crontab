@@ -1,0 +1,6 @@
+#Crontab:
+01 01 * * * sqlite3 /home/flask/project001/db/Task.db .dump | gzip -c > /home/flask/project001/db/backup/Task`date +"%Y%m%d"`.db.dump.gz.Z
+
+#Desc:
+#Every day at 01:01 am crontab will do a dump/compress of the db, output format: TaskYYYMMDD.db.dump.gz.Z can extract with > zcat TaskYYYMMDD.db.dump.gz.Z
+#To Create the new Db: zcat Task20200604.db.dump.gz.Z | sqlite3 Task-SNAME-.db
